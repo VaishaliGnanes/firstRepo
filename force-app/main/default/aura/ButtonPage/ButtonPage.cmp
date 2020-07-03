@@ -1,0 +1,18 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForAllPageTypes">
+	  <lightning:layout horizontalAlign="center">
+        <lightning:layoutItem size="4">
+            
+                <lightning:button variant="brand" label="Submit For Approval" onclick="{!c.buttonclick}"  iconName="action:approval" disabled="{!v.Disable}"/>    
+            
+            	<lightning:button variant="brand" label="Recall" onclick="{!c.recall}"  iconName="action:recall"/> 
+    		
+                <lightning:button variant="brand" label="Submit to TD" onclick="{!c.submitToTD}" iconName="action:update_status" />    
+            
+                <lightning:button variant="brand" label="Unlock TD" onclick="{!c.UnlockTDcall}" iconName="action:password_unlock" />    
+            
+                <lightning:button variant="brand" label="Close" onclick="{!c.closecall}" iconName="action:close"/>   
+            
+        </lightning:layoutItem>
+    </lightning:layout> 
+
+</aura:component>

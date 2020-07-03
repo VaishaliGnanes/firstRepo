@@ -1,0 +1,102 @@
+<apex:page standardController="Contact" extensions="HTMLTable" id="myPage" showHeader="false">
+
+<style>
+
+
+background-color: #CCCCCC;
+}
+  
+  
+.tableReport{
+            min-width: 1000px;
+            width: 100%;
+        }
+.rich-table-thead {
+    border-bottom: solid 1px #C0C0C0;
+    
+}
+.reportContainer{
+            height:600px;
+            width:600px;
+            min-height:200px;
+            max-height:500px;
+            overflow-x:scroll;
+            overflow-y:scroll;
+            overflow:auto;
+        }   
+.headerCol{
+            text-align: center;
+            background-color:#17375D;
+            color: white;
+            white-space: normal;
+            vertical-align: middle !important;
+          
+        }
+.GroupheaderOrder{
+            text-align: center;
+            background-color:#17375D;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width:25%;
+          
+        } 
+.dataRow td {
+            border-width: 1px 1px 1px 1px;
+            vertical-align: middle;
+        }
+.acronymProdheader{
+            background-color:#17375D;
+            color: white !important;
+            text-align: right; 
+         
+        } 
+.table-wrapper { 
+    overflow-x:scroll;
+}
+
+.freeze{
+position:fixed;
+}   
+</style>
+    
+    <apex:form id="myForm">
+        <apex:pageBlock id="myBlock">
+            <apex:pageBlockSection id="mySection">
+            <apex:outputPanel layout="block" styleClass="reportContainer" id="myPanel">
+                <table class="tableReport" id="myTable">
+                    <thead class="rich-table-thead">
+                        <tr style="width:100%;">
+                            <th colspan="1" class="GroupheaderOrder"> Record Details </th>
+                            <th colspan="2" class="GroupheaderOrder"> Contact Details </th> 
+                            <th colspan="3" class="GroupheaderOrder"> Final Reference </th>
+                        </tr>
+                        <tr style="width:100%;">
+                            <th class="headerCol"> Record ID </th>
+                            <th class="headerCol"> First Name </th> 
+                            <th class="headerCol"> Last Name</th>
+                            <th class="headerCol"> Email </th>
+                            <th class="headerCol"> Phone</th> 
+                            <th class="headerCol"> Status </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!lstcon}" var="con">
+                        <tr class="dataRow">
+                            <div class="acronymProdheader">
+                            <td class="freeze">{!con.Id}</td>
+                            <td>{!con.FirstName}</td>
+                            <td>{!con.LastName}</td>
+                            <td>{!con.Email}</td>
+                            <td>{!con.Phone}</td>
+                            <td>{!con.Account.Name}</td>
+                            </div>
+                        </tr>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+            </apex:outputPanel>   
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

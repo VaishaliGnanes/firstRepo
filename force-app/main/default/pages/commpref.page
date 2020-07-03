@@ -1,0 +1,10 @@
+<apex:page Standardcontroller="Account" >
+ <apex:pageblock >
+  <apex:pageBlockSection title="ID">
+      <apex:pageBlockSectionItem rendered="true">
+          <apex:outputLabel value="Pageblockid"></apex:outputLabel>
+          <apex:outputField value="{!account.name}"></apex:outputField> 
+      </apex:pageBlockSectionItem>
+  </apex:pageBlockSection>
+ </apex:pageblock>
+</apex:page>

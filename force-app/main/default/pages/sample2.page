@@ -1,0 +1,7 @@
+<apex:page controller="AcctContr" extensions="AcctContr">
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!con}" var="item">
+        <apex:column value="{!item.name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

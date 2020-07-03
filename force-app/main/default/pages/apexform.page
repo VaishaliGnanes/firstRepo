@@ -1,0 +1,10 @@
+<apex:page standardController="Account" >
+    <apex:form >
+    <apex:pageBlock >
+       Account <apex:inputField value="{!account.Name}" />
+        <apex:inputField value="{!account.Phone}"/>
+        <apex:commandButton id="Save" action="{!Save}" value="Save"/>
+<apex:commandButton id="Cancel" action="{!Cancel}" value="Cancel"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

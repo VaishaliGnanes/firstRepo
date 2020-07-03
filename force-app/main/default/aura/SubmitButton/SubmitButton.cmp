@@ -1,0 +1,4 @@
+<aura:component controller="SubmitButtonController" implements="force:lightningQuickAction,flexipage:availableForAllPageTypes">    
+    <aura:attribute name="recordId" type="Id"/>
+    <lightning:button label="Submit" variant="brand" onclick="{!c.submit}"/>
+</aura:component>

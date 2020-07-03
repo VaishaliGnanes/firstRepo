@@ -1,0 +1,7 @@
+<apex:page controller="LoginController">
+    <apex:form >
+  Username  <apex:inputText title="Username" value="{!uname}"/><br></br>
+  pwd  <apex:inputSecret label="pwd" value="{!pwd}"/>
+  <apex:commandButton action="{!login}" value="log"/>
+    </apex:form>
+</apex:page>

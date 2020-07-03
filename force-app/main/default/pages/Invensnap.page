@@ -1,0 +1,10 @@
+<apex:page controller="datatable" >
+<apex:form >
+<apex:pageBlock >
+<apex:inputText label="Enter" value="{!inputValue}" alt="Enter alt" title="Enter title" />
+<apex:pageBlockTable value="{!Accounts}" var="acc">
+<apex:column value="{!acc.name}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

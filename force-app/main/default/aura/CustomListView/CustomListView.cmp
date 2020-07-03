@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global"
+                >
+<div>
+    <lightning:select name="select" label="Filter By">
+        <option value="">Choose one</option>
+        <option value="1">Impacted Hybrid</option>
+        <option value="2">Batch Number</option>
+        <option value="3">Case Number</option>
+    </lightning:select>
+</div>	
+</aura:component>
