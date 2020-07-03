@@ -8,6 +8,7 @@ global class AORNew implements database.Batchable<sObject> {
         List<Account> ac1 = new List<Account>();
         Map<String,Account> m1 = new Map<String,Account>();
         List<AOR__c> l1 = new List<AOR__c>();
+        //check
         for(AOR__c a :ac ){
             accid.add(a.Name.substringAfterLast('-'));
         }
